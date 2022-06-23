@@ -7,14 +7,7 @@
   flex-direction: column;
   padding: 60px Max(40px, calc((100% - 900px) / 2));
 }
-.header__title{
-  font-size: 22px;
-  line-height: 27px;
-  text-transform: uppercase;
-  font-weight: 500;
-  display: flex;
-  align-items: center;
-}
+
 .header__title i{
   font-size: 16px;
   margin-right: 5px;

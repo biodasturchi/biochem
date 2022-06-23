@@ -6,7 +6,7 @@ const Home = () => {
   return (
     <>
       <Navbar />
-      <Header />
+      <Header props="Your Lab Slogan" />
       <Banner />
       <Hilights />
       <Footer />
