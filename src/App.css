@@ -20,16 +20,6 @@ a {
   text-decoration: none;
 }
 
-/* General styles */
-.header__title{
-  font-size: 22px;
-  line-height: 27px;
-  text-transform: uppercase;
-  font-weight: 500;
-  display: flex;
-  align-items: center;
-}
-
 .scale-up-center {
 	-webkit-animation: scale-up-center 0.4s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
 	animation: scale-up-center 0.4s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
