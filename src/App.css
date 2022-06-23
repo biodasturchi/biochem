@@ -3,10 +3,16 @@
   padding: 0;
   box-sizing: border-box;
   scroll-behavior: smooth;
+  font-family: var(--font-family);
 }
 
 body {
-  background: var(--color-bg);
+  background-image: url('./assets/background.jpg');
+  height: 100%; 
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  zoom: normal;
 }
 
 a {

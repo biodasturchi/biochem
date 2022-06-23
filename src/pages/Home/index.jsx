@@ -1,9 +1,16 @@
 import React from 'react'
-import { Navbar } from '../../components'
+import { Navbar, Header, Footer, Banner, Hilights } from '../../components'
+import './home.css'
 
 const Home = () => {
   return (
-    <Navbar />
+    <>
+      <Navbar />
+      <Header />
+      <Banner />
+      <Hilights />
+      <Footer />
+    </>
   )
 }
 

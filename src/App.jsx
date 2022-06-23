@@ -1,5 +1,5 @@
 import './App.css'
-import { Home } from './pages'
+import { Home, Research, Blog, Team, Contact } from './pages'
 import {
   BrowserRouter,
   Routes,
@@ -8,13 +8,19 @@ import {
 
 function App() {
   return (
-    <div className="App">
-      <BrowserRouter>
-        <Routes>
-          <Route path='/' element={<Home />} />
-        </Routes>
-      </BrowserRouter>
-    </div>
+    <>
+      <div className="App">
+        <BrowserRouter>
+          <Routes>
+            <Route path='/' element={<Home />} />
+            <Route path='/research' element={<Research />} />
+            <Route path='/blog' element={<Blog />} />
+            <Route path='/team' element={<Team />} />
+            <Route path='/contact' element={<Contact />} />
+          </Routes>
+        </BrowserRouter>
+      </div>
+    </>
   )
 }
 

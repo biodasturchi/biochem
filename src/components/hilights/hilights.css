@@ -1,0 +1,67 @@
+.hilights{
+  background: #fff;
+  color: #000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding: 60px Max(40px, calc((100% - 900px) / 2));
+}
+.hilights__title{
+  font-size: 22px;
+  line-height: 27px;
+  text-transform: uppercase;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+}
+
+.hilights__box{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 40px 0;
+}
+.hilights__box:nth-child(2n){
+  flex-direction: row-reverse;
+}
+
+.hilights__box_img{
+  width: 360px;
+  height: 200px;
+  margin: 0 50px 0 0;
+}
+.hilights__box:nth-child(2n) .hilights__box_img{
+  margin: 0 0 0 50px;
+}
+
+.hilights__box_content{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.hilights__box_content-title{
+  font-weight: 500;
+  line-height: 29px;
+  /* margin-bottom: 20px; */
+}
+
+.hilights__box_content-desc{
+  margin: 20px 0;
+  text-align: justify;
+  line-height: 1.8rem;
+  letter-spacing: 1.2px;
+  font-weight: 400;
+}
+
+.hilights__box_content-link{
+  font-weight: 500;
+  color: #0a84ff;
+  transition: all 0.3s linear;
+  cursor: pointer;
+}
+.hilights__box_content-link:hover{
+  color: #000000;
+}

@@ -14,11 +14,15 @@ const Navbar = () => {
           <Link to="/">
             <img src={logo} alt="Bilolab" />
           </Link>
+          <Link to="/">
+            <span>Plant Cytoprotectors Lab.</span>
+          </Link>
         </div>
         <div className="navbar__links-container">
           <Link to="/">Home</Link>
-          <Link to="/news">News</Link>
-          <Link to="/about">About</Link>
+          <Link to="/research">Research</Link>
+          <Link to="/blog">Blog</Link>
+          <Link to="/team">Team</Link>
           <Link to="/contact">Contact</Link>
         </div>
       </div>
@@ -30,8 +34,9 @@ const Navbar = () => {
           <div className="navbar__menu_container scale-up-center">
             <div className="navbar__menu_container-links">
               <Link to="/">Home</Link>
-              <Link to="/news">News</Link>
-              <Link to="/about">About</Link>
+              <Link to="/research">Research</Link>
+              <Link to="/blog">Blog</Link>
+              <Link to="/team">Team</Link>
               <Link to="/contact">Contact</Link>
             </div>
           </div>
