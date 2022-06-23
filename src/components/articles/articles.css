@@ -1,0 +1,35 @@
+.articles__container{
+  background: #FAFAFA;
+  padding: 60px Max(40px, calc((100% - 900px) / 2));
+}
+
+.search__box{
+  width: 450px;
+  height: 40px;
+  margin: 0 auto 50px;
+  display: flex;
+  align-items: center;
+  border: 1px solid #000;
+  border-radius: 5px;
+  padding: 8px 16px;
+}
+.search__input{
+  width: 100%;
+  max-width: unset;
+  height: 100%;
+  margin: 0;
+  padding-right: 10px;
+  border: none;
+  outline: none;
+}
+.btn{
+  border: none;
+  outline: none;
+  background: transparent!important;
+}
+
+.article__content_box{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}

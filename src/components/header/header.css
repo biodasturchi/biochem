@@ -30,28 +30,3 @@
   margin-top: 40px;
   text-align: justify;
 }
-
-.search__box{
-  width: 450px;
-  height: 50px;
-  margin: 50px auto 20px;
-  display: flex;
-  align-items: center;
-  border: 1px solid #000;
-  border-radius: 5px;
-  padding: 8px 16px;
-}
-.search__input{
-  width: 100%;
-  max-width: unset;
-  height: 100%;
-  margin: 0;
-  padding-right: 10px;
-  border: none;
-  outline: none;
-}
-.btn{
-  border: none;
-  outline: none;
-  background: transparent!important;
-}
