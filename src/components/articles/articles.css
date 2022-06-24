@@ -19,6 +19,7 @@
   height: 100%;
   margin: 0;
   padding-right: 10px;
+  background: none;
   border: none;
   outline: none;
 }
@@ -28,8 +29,72 @@
   background: transparent!important;
 }
 
+/* Article contant */
+.article__content{
+  /* padding: 0 120px; */
+}
 .article__content_box{
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  margin-bottom: 60px;
+}
+.article__content_img{
+  margin-right: 30px;
+}
+.article__content_title{
+  font-weight: 500;
+  color: #0a84ff;
+  transition: all 0.3s linear;
+  cursor: pointer;
+  text-decoration: underline;
+}
+.article__content_title:hover{
+  color: #000;
+}
+.article__content_authors{
+  margin: 15px 0;
+  font-weight: 400;
+}
+.article__content_j_d{
+  display: flex;
+  align-items: center;
+  margin-bottom: 15px;
+}
+.article__content_journal{
+  margin-right: 5px;
+}
+.article__content_date{
+  margin-left: 5px;
+}
+.article__content_keywords span{
+  background-color: #0a84ff;
+  color: #fff;
+  border-radius: 15px;
+  padding: 4px 8px;
+  margin-right: 5px;
+}
+
+/* Pagination */
+.pagination__nav{
+  list-style-type: none;
+  padding: 0 200px;
+}
+.pagination{
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  list-style: none;
+}
+.page__link{
+  padding: 1px 10px;
+  border: 1px solid #999999;
+  cursor: pointer;
+  color: #0a84ff;
+  transition: all 0.3s linear;
+}
+.page__link:hover{
+  background-color: #999999;
+}
+.page__link:checked{
+  outline: 1px solid #0a84ff;
 }

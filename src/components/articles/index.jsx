@@ -1,29 +1,47 @@
+import { useState } from 'react'
 import { articles } from '../../data/articles'
+import Article from './article'
+import Pagination from './pagination'
 import './articles.css'
 
 const Articles = () => {
+  const [query, setQuery] = useState("")
+  const [currentPage, setCurrentPage] = useState(1)
+  const [postsPerPage] = useState(5)
+
+  // Search section
+  const keys = ["title", "authors", "journal", "date"]
+  const search = (data) => {
+    return data.filter(
+      (item) => keys.some(key => item[key].toLowerCase().includes(query))
+    )
+  }
+
+  // Get current posts
+  const indexOfLastPost = currentPage * postsPerPage
+  const indexOfFirstPost = indexOfLastPost - postsPerPage
+  const currentPosts = articles.slice(indexOfFirstPost, indexOfLastPost)
+
+  // Change page
+  const paginate = (pageNumber) => setCurrentPage(pageNumber)
+
   return (
     <div className="articles__container">
       <div className="search__box">
-        <input type="text" placeholder='Search' className="search__input" />
+        <input
+          type="text"
+          placeholder='Search'
+          className="search__input"
+          onChange={e => setQuery(e.target.value)} />
         <button type='button' className="btn">
           <i class="fas fa-search" />
         </button>
       </div>
-      {
-        articles.map(({ id, title, image, link }) => {
-          return (
-            <div className='article__content_box' key={id}>
-              <img src={image.src} alt="bla-bla" />
-              <div className="article__content_content">
-                <a href={link} target="_blank" className="article__content_link">
-                  {title}
-                </a>
-              </div>
-            </div>
-          )
-        })
-      }
+      <Article data={search(currentPosts)} />
+      <Pagination
+        postsPerPage={postsPerPage}
+        totalPosts={articles.length}
+        paginate={paginate} />
     </div>
   )
 }
