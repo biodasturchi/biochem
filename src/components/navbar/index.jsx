@@ -19,11 +19,21 @@ const Navbar = () => {
           </Link>
         </div>
         <div className="navbar__links-container">
-          <Link to="/">Home</Link>
-          <Link to="/research">Research</Link>
-          <Link to="/blog">Blog</Link>
-          <Link to="/team">Team</Link>
-          <Link to="/contact">Contact</Link>
+          <Link className='tooltip' to="/">Home
+            <div className="tooltiptext">Home section</div>
+          </Link>
+          <Link className='tooltip' to="/research">Research
+            <div className="tooltiptext">Published works</div>
+          </Link>
+          <Link className='tooltip' to="/blog">Blog
+            <div className="tooltiptext">Blog section</div>
+          </Link>
+          <Link className='tooltip' to="/team">Team
+            <div className="tooltiptext">About our team</div>
+          </Link>
+          <Link className='tooltip' to="/contact">Contact
+            <div className="tooltiptext">Email, adress and location</div>
+          </Link>
         </div>
       </div>
       <div className="navbar__menu">

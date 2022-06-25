@@ -77,12 +77,11 @@
 /* Pagination */
 .pagination__nav{
   list-style-type: none;
-  padding: 0 200px;
 }
 .pagination{
   display: flex;
   align-items: center;
-  justify-content: space-around;
+  justify-content: center;
   list-style: none;
 }
 .page__link{

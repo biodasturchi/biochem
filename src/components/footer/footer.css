@@ -25,6 +25,7 @@
   display: flex;
   align-items: center;
   letter-spacing: 5px;
+  font-size: 0.9rem;
 }
 .footer__desc .heart {
   color: rgb(202, 41, 41);
