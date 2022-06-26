@@ -38,12 +38,7 @@
   letter-spacing: 1.1px;
   margin-left: 5px;
 }
-/* .navbar__links-logo img:hover,
-.navbar__links-logo span:hover{
-  box-shadow: 2px 0px 18px 5px rgba(255,255,255,0.47);
-  -webkit-box-shadow: 2px 0px 18px 5px rgba(255,255,255,0.47);
-  -moz-box-shadow: 2px 0px 18px 5px rgba(255,255,255,0.47);
-} */
+
 .navbar__links-container{
   display: flex;
   flex-direction: row;
@@ -98,6 +93,8 @@
   margin: 0 1rem;
   cursor: pointer;
   transition: all linear 0.2s;
+  transform: scale(1); /* Standard Property */
+  transform-origin: 0 0;  /* Standard Property */
 }
 .navbar__links-container a:hover{
   color: #878380;

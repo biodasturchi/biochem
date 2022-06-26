@@ -60,6 +60,8 @@
   font-weight: 500;
   color: #0a84ff;
   transition: all 0.3s linear;
+  transform: scale(1); /* Standard Property */
+  transform-origin: 0 0;  /* Standard Property */
   cursor: pointer;
 }
 .hilights__box_content-link:hover{

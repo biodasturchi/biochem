@@ -2,6 +2,8 @@ import React from 'react'
 import './hilights.css'
 import photo from '../../assets/photo.jpg'
 import { Link } from 'react-router-dom'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faArrowRight } from '@fortawesome/free-solid-svg-icons'
 
 const Hilights = () => {
   return (
@@ -21,7 +23,7 @@ const Hilights = () => {
           </div>
           <div className="hilights__box_content-link">
             <Link to='/research'>
-              See what we’ve published <i class="fa-solid fa-arrow-right"></i>
+              See what we've published <FontAwesomeIcon icon={faArrowRight} />
             </Link>
           </div>
         </div>
@@ -38,7 +40,7 @@ const Hilights = () => {
           </div>
           <div className="hilights__box_content-link">
             <Link to='/blog'>
-              See what we’ve published <i class="fa-solid fa-arrow-right"></i>
+              See what we've published <FontAwesomeIcon icon={faArrowRight} />
             </Link>
           </div>
         </div>
@@ -55,7 +57,7 @@ const Hilights = () => {
           </div>
           <div className="hilights__box_content-link">
             <Link to='/team'>
-              See what we’ve published <i class="fa-solid fa-arrow-right"></i>
+              See what we've published <FontAwesomeIcon icon={faArrowRight} />
             </Link>
           </div>
         </div>

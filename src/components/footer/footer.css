@@ -8,16 +8,17 @@
   color: #fff;
 }
 
-.footer__links a i{
+.footer__links a svg{
   font-size: 1.25rem;
   padding: 0 0.8rem;
-  transition: all linear 0.3s;
 }
 .footer__links a{
-  transition: all 0.3s linear;
+  transition: all linear 0.3s;
+  transform: scale(1); /* Standard Property */
+  transform-origin: 0 0;  /* Standard Property */
 }
 .footer__links a:hover{
-  opacity: 0.5;
+  color: #878380;
 }
 
 .footer__desc{

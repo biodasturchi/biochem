@@ -1,5 +1,7 @@
 import React from 'react'
 import './header.css'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faLeaf, faMicroscope } from '@fortawesome/free-solid-svg-icons'
 
 const Header = ({ props }) => {
   return (
@@ -8,8 +10,8 @@ const Header = ({ props }) => {
         {props === "home"
           ? <></>
           : props === "research"
-            ? <i class="fa-solid fa-microscope"></i>
-            : <i class="fa-solid fa-leaf"></i>
+            ? <FontAwesomeIcon icon={faMicroscope} />
+            : <FontAwesomeIcon icon={faLeaf} />
         }
         {props === "home"
           ? <span>Your Lab Slogan</span>

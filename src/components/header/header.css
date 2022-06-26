@@ -16,7 +16,7 @@
   display: flex;
   align-items: center;
 }
-.header__title i{
+.header__title svg{
   color: #81d4fa;
   font-size: 1.4rem;
   margin-right: 20px;
