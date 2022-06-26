@@ -1,13 +1,13 @@
-import './header.css'
-
 import React from 'react'
+import './header.css'
 
 const Header = ({ props }) => {
   return (
     <div className='header'>
       <div className="header__title">
         {props === "home"
-          ? <></> : props === "research"
+          ? <></>
+          : props === "research"
             ? <i class="fa-solid fa-microscope"></i>
             : <i class="fa-solid fa-leaf"></i>
         }
