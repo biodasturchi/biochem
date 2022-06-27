@@ -14,8 +14,6 @@
 }
 .footer__links a{
   transition: all linear 0.3s;
-  transform: scale(1); /* Standard Property */
-  transform-origin: 0 0;  /* Standard Property */
 }
 .footer__links a:hover{
   color: #878380;

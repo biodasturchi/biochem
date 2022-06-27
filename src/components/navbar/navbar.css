@@ -93,8 +93,6 @@
   margin: 0 1rem;
   cursor: pointer;
   transition: all linear 0.2s;
-  transform: scale(1); /* Standard Property */
-  transform-origin: 0 0;  /* Standard Property */
 }
 .navbar__links-container a:hover{
   color: #878380;

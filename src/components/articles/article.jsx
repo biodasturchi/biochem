@@ -10,7 +10,7 @@ const Article = ({ data }) => {
           return (
             <div className='article__content_box' key={id}>
               <img src={image.src} alt="Article" className='article__content_img' width={120} height={120} />
-              <div className="article__content_content">
+              <div className="article__content_content" >
                 <a href={link} target="_blank" className="article__content_title">
                   {title}
                 </a>
@@ -23,8 +23,8 @@ const Article = ({ data }) => {
                   <span className="article__content_date">{date}</span>
                 </div>
                 <div className="article__content_keywords">
-                  {keywords.map(val => (
-                    <span>{val} </span>
+                  {keywords.map((val, idx) => (
+                    <span key={idx}>{val} </span>
                   ))}
                 </div>
               </div>

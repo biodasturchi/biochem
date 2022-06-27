@@ -3,6 +3,9 @@ import { articles } from '../../data/articles'
 import Article from './article'
 import Pagination from './pagination'
 import './articles.css'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faSearch } from '@fortawesome/free-solid-svg-icons'
+
 
 const Articles = () => {
   const [query, setQuery] = useState("")
@@ -34,7 +37,7 @@ const Articles = () => {
           className="search__input"
           onChange={e => setQuery(e.target.value)} />
         <button type='button' className="btn">
-          <i class="fas fa-search" />
+          <FontAwesomeIcon icon={faSearch} />
         </button>
       </div>
       <Article data={search(currentPosts)} />
