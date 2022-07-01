@@ -29,3 +29,14 @@
 .footer__desc .heart {
   color: rgb(202, 41, 41);
 }
+
+@media screen and (max-width: 550px) {
+  .footer{
+    padding: 3rem 1rem;
+  }
+  .footer__desc span{
+    text-align: center;
+    font-size: 0.8rem;
+  }
+
+}

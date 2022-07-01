@@ -65,3 +65,14 @@
 .hilights__box_content-link:hover{
   color: #000000;
 }
+
+@media screen and (max-width: 550px) {
+  .hilights__box,
+  .hilights__box:nth-child(2n){
+    flex-direction: column;
+  }
+  .hilights__box:nth-child(2n) .hilights__box_img,
+  .hilights__box_img{
+    margin: 0;
+  }
+}
