@@ -1,5 +1,5 @@
-import { useState } from 'react'
-import { articles } from '../../data/articles'
+import { useState, useEffect } from 'react'
+// import { articles } from '../../data/articles'
 import Article from './article'
 import Pagination from './pagination'
 import './articles.css'
@@ -8,9 +8,22 @@ import { faSearch } from '@fortawesome/free-solid-svg-icons'
 
 
 const Articles = () => {
+
+  const [articlesData, setArticlesData] = useState([])
+  const [loading, setLoading] = useState(true)
   const [query, setQuery] = useState("")
   const [currentPage, setCurrentPage] = useState(1)
-  const [postsPerPage] = useState(5)
+  const [postsPerPage] = useState(3)
+
+  // Get articles
+  useEffect(() => {
+    fetch("https://biochem-data.herokuapp.com/articles")
+      .then((res) => res.json())
+      .then((data) => {
+        setLoading(false)
+        setArticlesData(data)
+      })
+  }, [])
 
   // Search section
   const keys = ["title", "authors", "journal", "date"]
@@ -23,7 +36,7 @@ const Articles = () => {
   // Get current posts
   const indexOfLastPost = currentPage * postsPerPage
   const indexOfFirstPost = indexOfLastPost - postsPerPage
-  const currentPosts = articles.slice(indexOfFirstPost, indexOfLastPost)
+  const currentPosts = articlesData.slice(indexOfFirstPost, indexOfLastPost)
 
   // Change page
   const paginate = (pageNumber) => setCurrentPage(pageNumber)
@@ -40,12 +53,19 @@ const Articles = () => {
           <FontAwesomeIcon icon={faSearch} />
         </button>
       </div>
-      <Article data={search(currentPosts)} />
-      <Pagination
-        postsPerPage={postsPerPage}
-        totalPosts={articles.length}
-        paginate={paginate} />
-    </div>
+      {loading ? (
+        <h1 style={{ textAlign: "center" }}>Loading data...</h1>
+      ) : (
+        <>
+          <Article data={search(currentPosts)} />
+          <Pagination
+            postsPerPage={postsPerPage}
+            totalPosts={articlesData.length}
+            paginate={paginate} />
+        </>
+      )
+      }
+    </div >
   )
 }
 

@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react'
+import React from 'react'
 import './articles.css'
 
 const Article = ({ data }) => {
@@ -9,7 +9,7 @@ const Article = ({ data }) => {
         data.map(({ id, title, authors, journal, date, image, link, keywords }) => {
           return (
             <div className='article__content_box' key={id}>
-              <img src={image.src} alt="Article" className='article__content_img' width={120} height={120} />
+              <img src={image} alt="Article" className='article__content_img' width={120} height={120} />
               <div className="article__content_content" >
                 <a href={link} target="_blank" className="article__content_title">
                   {title}
