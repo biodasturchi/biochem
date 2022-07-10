@@ -1,4 +1,4 @@
-import React from 'react'
+import {memo} from 'react'
 import './articles.css'
 
 const Pagination = ({ postsPerPage, totalPosts, paginate }) => {
@@ -8,6 +8,7 @@ const Pagination = ({ postsPerPage, totalPosts, paginate }) => {
     pageNumbers.push(i)
   }
 
+  console.log(`Render Pagination component: ${typeof postsPerPage, typeof totalPosts, typeof paginate}`);
   return (
     <nav className='pagination__nav'>
       <ul className="pagination">
@@ -25,4 +26,4 @@ const Pagination = ({ postsPerPage, totalPosts, paginate }) => {
   )
 }
 
-export default Pagination
+export default memo(Pagination)

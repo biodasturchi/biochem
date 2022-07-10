@@ -1,8 +1,9 @@
-import React from 'react'
+import {memo} from 'react'
 import './articles.css'
 
 const Article = ({ data }) => {
 
+  console.log('Render Article component');
   return (
     <div className="article__content">
       {
@@ -36,4 +37,4 @@ const Article = ({ data }) => {
   )
 }
 
-export default Article
+export default memo(Article)
